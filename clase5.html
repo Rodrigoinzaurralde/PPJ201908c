@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Clase 05 (PPJ201908C)</title>
+<script>
+alert( "Desde el HEAD: " + document.body );
+// NULO(null), no se ha creado el body todavía
+</script>
+</head>
+<body>
+<p>
+	hola como estas
+</p>
+<script>
+alert( "Script desde el cuerpo BODY: " + document.body );
+// HTMLBodyElement, ahora existe
+var parrafos=document.getElementsByTagName("p");
+ console.log(parrafos);
+ document.write(parrafos);
+ var body=document.getElementsByTagName("body")[0];
+ console.log(body);
+ document.write(body);
+</script>
+</body>
+</html>

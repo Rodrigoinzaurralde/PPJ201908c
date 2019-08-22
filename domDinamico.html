@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Prueba del DOM Completa</title>
+    <script type="application/javascript">
+    function setBodyAttr(attr, value){
+      if (document.body) eval('document.body.'+attr+'="'+value+'"');
+      else notSupported();
+    }
+    </script>
+  </head> 
+  <body>
+    <div style="margin: .5in; height: 400;"> 
+      <p><b><tt>text</tt></b></p> 
+      <form> 
+        <select onChange="setBodyAttr('text', this.options[this.selectedIndex].value);"> 
+          <option value="black">negro 
+          <option value="darkblue">azul oscuro 
+		  <option value="red">rojo 
+        </select>
+        <p><b><tt>bgColor</tt></b></p>
+        <select onChange="setBodyAttr('bgColor',this.options[this.selectedIndex].value);"> 
+          <option value="white">Blanco 
+          <option value="lightgrey">gris
+		  <option value="red">rojo 
+
+        </select>
+        <p><b><tt>link</tt></b></p> 
+        <select onChange="setBodyAttr('link',
+        this.options[this.selectedIndex].value);">
+          <option value="blue">Azul
+          <option value="red">rojo
+        </select>  <small>
+        <a href="http://www.ibec.edu.uy" id="sample">
+        (link de ejemplo)</a></small><br>
+      </form>
+      <form>
+        <input type="button" value="Adaptar" onclick="ver()" />
+      </form>
+    </div>
+  </body>
+</html>
